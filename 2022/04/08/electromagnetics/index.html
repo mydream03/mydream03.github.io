@@ -24,7 +24,7 @@
 <meta property="og:description" content="磁场的高斯定理的推导 这几天阿梦的电磁学老师刚讲完磁场的高斯定理, 但阿梦总感觉推导并不是很严谨,因此阿梦自己尝试推导了一遍, 如果有不完善的地方, 还请大佬指正。 阿梦自己推导公式很喜欢从定义出发, 因为阿梦觉得从定义出发的推导可以看出最终公式的适用范围或者说限制条件, 闲话少说, 让我们开始梦幻般的推导吧。 \[ \begin{align} \text{integral fo">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-08T03:50:22.000Z">
-<meta property="article:modified_time" content="2022-04-08T12:02:29.924Z">
+<meta property="article:modified_time" content="2022-04-08T12:04:52.550Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="physics">
 <meta name="twitter:card" content="summary_large_image">
@@ -197,7 +197,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4.3k 字
+      4.1k 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      36 分钟
+      35 分钟
     </span>
   
 
@@ -239,7 +239,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 分钟前
+                  本文最后更新于：几秒前
                 
               </p>
             
@@ -253,7 +253,7 @@
 闲话少说, 让我们开始梦幻般的推导吧。</p>
 <p><span class="math display">\[
 \begin{align}
-\text{integral form:}  \oiint \limits_{S}\vec{B}\cdot d\vec{S}=0 \\
+\text{integral form:}  \oiint _{S}\vec{B}\cdot d\vec{S}=0 \\
 \text{differential form:}  \nabla \cdot \vec{B}=0
 \end{align}
 \]</span></p>
@@ -268,16 +268,16 @@
 也就能很自然的推导出完整的磁场高斯定理</p>
 <p>将(3)代入(1)中可得 <span class="math display">\[
 \begin{align}
-\oiint \limits_{S}\frac{\mu_0}{4\pi }\frac{I(d\vec{l}\times
-\vec{r})\cdot d \vec{S}}{r^{3}}
+\oiint _{S}\frac{\mu_0}{4\pi }\frac{I(d\vec{l}\times \vec{r})\cdot d
+\vec{S}}{r^{3}}
 \end{align}
 \]</span></p>
 <p>看到这个式子不知道大家是怎么想的,
 反正阿梦当时感觉做到这里似乎就束手无措了,不过电场高斯定理的推导在这时给了阿梦一些灵感</p>
 <p>还记得电场的高斯定理推导如下 <span class="math display">\[
 \begin{aligned}
-\oiint \limits_{S}\frac{1}{4\pi \varepsilon_0}\frac{q\vec{r}\cdot d
-\vec{S}}{r^3}&amp;=\oiint \limits_{S}\frac{q}{4\pi
+\oiint _{S}\frac{1}{4\pi \varepsilon_0}\frac{q\vec{r}\cdot d
+\vec{S}}{r^3}&amp;=\oiint _{S}\frac{q}{4\pi
 \varepsilon_0}d\Omega\\&amp;=\begin{cases}
     \frac{q}{\varepsilon_0}\quad\text{when the charge is in the closed
 surface} \\
@@ -298,13 +298,12 @@ class="math inline">\(\frac{(d\vec{l}\times \vec{r})\cdot d
 \hat{k}\)</span>, 代入(4)中可得</p>
 <p><span class="math display">\[
 \begin{align}
-\oiint \limits_{S}\frac{\mu_0}{4\pi }\frac{I(d\vec{l}\times
-\vec{r})\cdot d \vec{S}}{r^{3}}
-&amp;=\frac{\mu_0Idl}{4\pi }\oiint
-\limits_{S}\frac{(y\hat{k}-z\hat{j})\cdot (dydz \hat{i}+dxdz
-\hat{j}+dxdy \hat{k})}{r^{3}}\notag
+\oiint _{S}\frac{\mu_0}{4\pi }\frac{I(d\vec{l}\times \vec{r})\cdot d
+\vec{S}}{r^{3}}
+&amp;=\frac{\mu_0Idl}{4\pi }\oiint _{S}\frac{(y\hat{k}-z\hat{j})\cdot
+(dydz \hat{i}+dxdz \hat{j}+dxdy \hat{k})}{r^{3}}\notag
 \\&amp;=\frac{\mu_0Idl}{4\pi }\oiint
-\limits_{S}\frac{y}{r^{3}}dydx-\frac{z}{r^{3}}dzdx
+_{S}\frac{y}{r^{3}}dydx-\frac{z}{r^{3}}dzdx
 \end{align}
 \]</span></p>
 <p>推导到了(5)式后, 阿梦顿时信心倍增,
@@ -312,19 +311,18 @@ class="math inline">\(\frac{(d\vec{l}\times \vec{r})\cdot d
 <p><span class="math display">\[
 \begin{align}
 \oiint
-\limits_{S}\frac{y}{r^{3}}dydx-\frac{z}{r^{3}}dzdx&amp;=\iiint\limits_{V}(\frac{\partial
+_{S}\frac{y}{r^{3}}dydx-\frac{z}{r^{3}}dzdx&amp;=\iiint_{V}(\frac{\partial
 (\frac{y}{r^{3}})}{\partial z}-\frac{\partial
 (\frac{z}{r^{3}})}{\partial y})dV \notag\\
-&amp;=\iiint\limits_{V}(\frac{-3yz}{r^{5}}-\frac{-3yz}{r^{5}})dV
-\notag\\
+&amp;=\iiint_{V}(\frac{-3yz}{r^{5}}-\frac{-3yz}{r^{5}})dV \notag\\
 &amp;=0
 \end{align}
 \]</span></p>
 <p>将(6)代入(5)中可得</p>
 <p><span class="math display">\[
 \begin{align}
-\oiint \limits_{S}\frac{\mu_0}{4\pi }\frac{I(d\vec{l}\times
-\vec{r})\cdot d \vec{S}}{r^{3}}=0
+\oiint _{S}\frac{\mu_0}{4\pi }\frac{I(d\vec{l}\times \vec{r})\cdot d
+\vec{S}}{r^{3}}=0
 \end{align}
 \]</span></p>
 <p>是不是这样就结束了呢？当然不是,
@@ -352,13 +350,13 @@ class=&quot;math inline&quot;&gt;\(S\)的内侧
 <p>经过这样处理以后问题又变成了前面的问题, 于是我们有</p>
 <p><span class="math display">\[
 \begin{align}
-\oiint \limits_{S\cup S_{\varepsilon}^{-}}\frac{\mu_0}{4\pi
+\oiint _{S\cup S_{\varepsilon}^{-}}\frac{\mu_0}{4\pi
 }\frac{I(d\vec{l}\times \vec{r})\cdot d \vec{S}}{r^{3}}&amp;=0\notag
-\\\implies \oiint \limits_{S}\frac{\mu_0}{4\pi }\frac{I(d\vec{l}\times
+\\\implies \oiint _{S}\frac{\mu_0}{4\pi }\frac{I(d\vec{l}\times
 \vec{r})\cdot d \vec{S}}{r^{3}}&amp;=-\oiint
-\limits_{S_{\varepsilon}^{-}}\frac{\mu_0}{4\pi }\frac{I(d\vec{l}\times
+_{S_{\varepsilon}^{-}}\frac{\mu_0}{4\pi }\frac{I(d\vec{l}\times
 \vec{r})\cdot d \vec{S}}{r^{3}}\notag
-\\&amp;=-\oiint \limits_{S_{\varepsilon}^{-}}\frac{\mu_0}{4\pi
+\\&amp;=-\oiint _{S_{\varepsilon}^{-}}\frac{\mu_0}{4\pi
 }\frac{Id\vec{l}\cdot (\vec{r}\times  d \vec{S})}{r^{3}}\notag
 \\&amp;=0
 \end{align}
@@ -375,7 +373,7 @@ class="math inline">\(\vec{n}\)</span>平行</p>
 而且表示其有源(事实上源点即是无连续偏导数的点)，而且你也能更加透彻地明白通量的概念(我们上面证明的最后一步是证明了任意闭合曲面的通量与一个球面的通量之间的关系)。</p>
 <p>至于最后微分形式的高斯定理, 只需直接对其用高斯公式即可 <span
 class="math display">\[
-\oiint \limits_{S}\vec{B}\cdot d\vec{S}=\iiint \limits_{V}\nabla \cdot
+\oiint _{S}\vec{B}\cdot d\vec{S}=\iiint _{V}\nabla \cdot
 \vec{B}dV=0\implies \nabla \cdot \vec{B}=0
 \]</span></p>
 <p>相信细心的朋友也已经看出来要想使用微分形式的高斯定理其实是有限制条件的,
